@@ -1,0 +1,24 @@
+[build-system]
+requires = ['setuptools']
+build-backend = 'setuptools.build_meta'
+
+[tool.setuptools]
+packages = ['dpkg_sig']
+
+[tool.setuptools.dynamic]
+version = {attr = 'dpkg_sig.__version__'}
+
+[project]
+name = 'py-dpkg-sig'
+authors = [
+  {name = 'Amit Aronovitch', email='aronovitch@gmail.com'}
+]
+dynamic = ['version']
+dependencies = [
+    'arpy~=2.3.0',
+    'python-gnupg~=0.5.1',
+    'typer~=0.9.0'
+]
+
+[project.scripts]
+dpkg-sig = "dpkg_sig.cli:app"
