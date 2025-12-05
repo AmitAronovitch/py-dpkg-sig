@@ -15,9 +15,9 @@ authors = [
 ]
 dynamic = ['version']
 dependencies = [
-    'arpy~=2.3.0',
-    'python-gnupg~=0.5.1',
-    'typer~=0.9.0'
+    'arpy>=2.3.0',
+    'python-gnupg>=0.5.1',
+    'typer>=0.16.0'
 ]
 
 [project.scripts]
